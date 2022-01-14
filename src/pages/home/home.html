@@ -1,14 +1,38 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      G00398334
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button settingsPage icon-only (click) = "openSettings()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <h1 [hidden] = "hidden4">No City Selected</h1>
+  <ion-list>
+    <ion-item>
+      <div [hidden] = "hidden">
+        <h1 [hidden] = "hidden1">{{ city }} not found, try another in Settings.</h1><h1 [hidden] = "hidden2">News and Weather for {{ city }}, {{ cityInfo.commonName }}</h1>
+        <img width="50" height = "40" src="{{ cityInfo.flag }}" alt="">
+        <br>
+        <br>
+        <h2><strong>Temperature:</strong></h2>
+        <h1><strong>{{ weatherInfo.temp }} ({{ units }})</strong></h1>
+        <br>
+        <h2><strong>Weather:</strong></h2>
+        <h1><strong>{{ weatherInfo.description }}</strong></h1>
+        <img src= "{{ weatherInfo.icon }}">
+        <br>
+        <br>
+        <h2><strong>Wind From:</strong></h2>
+        <h1><strong>{{ weatherInfo.wind_cdir_full }}</strong></h1>
+      </div>
+    </ion-item>
+  </ion-list>
+  <button ion-button color = "primary" (click) = "openNews()" [hidden] = "hidden3">News</button>
 </ion-content>

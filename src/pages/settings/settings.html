@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+          <ion-item>
+            <ion-label>
+              City
+            </ion-label>
+            <ion-input [(ngModel)] = "cityName"></ion-input>
+          </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-item>
+    <strong>Settings</strong>
+  </ion-item>
+
+  <ion-list radio-group [(ngModel)]="units">
+  <ion-list-header>
+    Units:
+  </ion-list-header>
+    <ion-item>
+      <ion-label>Scientific</ion-label>
+      <ion-radio value="Scientific"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Metric</ion-label>
+      <ion-radio value="Metric" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fahrenheit</ion-label>
+      <ion-radio value="Fahrenheit"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  
+  <button ion-button color = "primary" (click) = "saveInfo()">Save</button> 
+    
+    
+
+</ion-content>
