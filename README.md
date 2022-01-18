@@ -5,5 +5,7 @@ A simple Weather & News application built using Angular and Ionic frameworks. Us
 
 Demo:
 
-![](ScreenRecorderProject1.gif)
+![](https://github.com/DeanFHardy/Weather-App/blob/master/ScreenRecorderProject1.gif?raw=true)
+
+
 
